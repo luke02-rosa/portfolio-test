@@ -35,6 +35,13 @@ body{
     transform: perspective(560px) rotateX(20deg);
     transform-origin: top;
     border-radius: 2px;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.text{
+    border: 1px solid black;
+    padding: 5px;
     
 }
