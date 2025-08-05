@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: violet;
+}
+#contenitore-background{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 2px solid black;
+
+}
+/*.screen1{
+    background-color: white;
+    width: 30%;
+    height: 30%;
+    position: absolute;
+}*/
