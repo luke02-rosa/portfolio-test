@@ -16,6 +16,7 @@ body{
     align-items: center;
     position: relative;
     border: 2px solid black;
+    
 
 }
 .ds-img{
@@ -23,8 +24,9 @@ body{
     height: 95%;
 
 }
+
 .screen1{
-    background-color: white;
+    background-color:yellow;
     top: 12.5%;
     width: 36%;
     height: 34%;
@@ -33,38 +35,45 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 2px ;
-    gap: 8px;
-    perspective: 800px; 
-    transform-style: preserve-3d;
+    perspective: 1000px; 
     overflow: visible;
+    
+    
+     
 }
+
 .text1{
     font-size: 12px;
     border: 2px solid black;
     width: 35%;
-    height: 75%;
-     text-align: center;
-    backface-visibility: hidden; /* per evitare effetti strani di retro */
-    transform: rotateY(0deg);  /* nessuna rotazione di base */
-    transition: transform 0.5s ease, opacity 0.5s ease; /* animazioni fluide */
-    opacity: 0.5;  /* di base invisibili */
-    position: absolute;  /* sovrapposti, per gestire la rotazione */
+    height: 79%;
+    text-align: center;
+    backface-visibility: hidden; 
+    transform: rotateY(0deg);  
+    transition: transform 0.5s ease, opacity 0.5s ease;  
+    opacity: 0.5; 
+    position: absolute; 
+    
+
 }
 .text1.attivo {
     opacity: 1;
     transform: scale(1) rotateY(0deg);
     z-index: 2;
     cursor: default;
+    width: 60%;
 }
 .text1.sinistra {
-    transform: translateX(-90%) scale(0.7) rotateY(-15deg);
+    transform: translateX(-78%) scale(0.7) rotateY(-55deg);
     opacity: 0.7;
     z-index: 1;
+    left: 20%;
 }
 .text1.destra {
-    transform: translateX(90%) scale(0.7) rotateY(15deg);
+    transform: translateX(78%) scale(0.7) rotateY(55deg);
     opacity: 0.7;
     z-index: 1;
+    right: 20%;
 }
     
 
@@ -88,13 +97,13 @@ body{
 .text{
     padding: 5px;
     font-size: 10px;
-    width: 33%;  /* prendono tutta la larghezza della screen2 */
+    width: 33%;  
     text-align: center;
-    backface-visibility: hidden; /* per evitare effetti strani di retro */
-    transform: rotateY(0deg);  /* nessuna rotazione di base */
-    transition: transform 0.5s ease, opacity 0.5s ease; /* animazioni fluide */
-    opacity: 0.5;  /* di base invisibili */
-    position: absolute;  /* sovrapposti, per gestire la rotazione */
+    backface-visibility: hidden;  
+    transform: rotateY(0deg);  
+    transition: transform 0.5s ease, opacity 0.5s ease; 
+    opacity: 0.5;  
+    position: absolute;  
 }
 .text.attivo {
     opacity: 1;
