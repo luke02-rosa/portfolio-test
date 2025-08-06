@@ -25,13 +25,52 @@ body{
 }
 .screen1{
     background-color: white;
-    top: 12%;
+    top: 12.5%;
     width: 36%;
     height: 34%;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px ;
+    gap: 8px;
+    perspective: 800px; 
+    transform-style: preserve-3d;
+    overflow: visible;
 }
+.text1{
+    font-size: 12px;
+    border: 2px solid black;
+    width: 35%;
+    height: 75%;
+     text-align: center;
+    backface-visibility: hidden; /* per evitare effetti strani di retro */
+    transform: rotateY(0deg);  /* nessuna rotazione di base */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* animazioni fluide */
+    opacity: 0.5;  /* di base invisibili */
+    position: absolute;  /* sovrapposti, per gestire la rotazione */
+}
+.text1.attivo {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg);
+    z-index: 2;
+    cursor: default;
+}
+.text1.sinistra {
+    transform: translateX(-90%) scale(0.7) rotateY(-15deg);
+    opacity: 0.7;
+    z-index: 1;
+}
+.text1.destra {
+    transform: translateX(90%) scale(0.7) rotateY(15deg);
+    opacity: 0.7;
+    z-index: 1;
+}
+    
+
+
 .screen2{
-    background-color:red;
+    background-color: grey;
     top: 58.6%;
     width: 29.2%;
     height: 23%;
@@ -48,35 +87,34 @@ body{
 }
 .text{
     padding: 5px;
-    font-size: 9px;
-     width: 33%;  /* prendono tutta la larghezza della screen2 */
+    font-size: 10px;
+    width: 33%;  /* prendono tutta la larghezza della screen2 */
     text-align: center;
-
     backface-visibility: hidden; /* per evitare effetti strani di retro */
     transform: rotateY(0deg);  /* nessuna rotazione di base */
     transition: transform 0.5s ease, opacity 0.5s ease; /* animazioni fluide */
-    
     opacity: 0.5;  /* di base invisibili */
     position: absolute;  /* sovrapposti, per gestire la rotazione */
 }
 .text.attivo {
     opacity: 1;
     transform: scale(1) rotateY(0deg);
-    z-index: 10;
+    z-index: 2;
     cursor: default;
 }
 .text.sinistra {
     transform: translateX(-90%) scale(0.7) rotateY(-15deg);
     opacity: 0.7;
-    z-index: 5;
+    z-index: 1;
 }
 .text.destra {
     transform: translateX(90%) scale(0.7) rotateY(15deg);
     opacity: 0.7;
-    z-index: 5;
+    z-index: 1;
 }
 .btn1{
     position: absolute;
+
     left: 20%;
     top: 76.5%;
     opacity: 20%;
