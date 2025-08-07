@@ -26,7 +26,7 @@ body{
 }
 
 .screen1{
-    background-color:yellow;
+    background-color:grey;
     top: 12.5%;
     width: 36%;
     height: 34%;
@@ -43,11 +43,13 @@ body{
 }
 
 .text1{
+    
     font-size: 12px;
     border: 2px solid black;
     width: 35%;
     height: 79%;
     text-align: center;
+    justify-content: center;
     backface-visibility: hidden; 
     transform: rotateY(0deg);  
     transition: transform 0.5s ease, opacity 0.5s ease;  
@@ -62,18 +64,27 @@ body{
     z-index: 2;
     cursor: default;
     width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .text1.sinistra {
     transform: translateX(-78%) scale(0.7) rotateY(-55deg);
     opacity: 0.7;
     z-index: 1;
     left: 20%;
+     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .text1.destra {
     transform: translateX(78%) scale(0.7) rotateY(55deg);
     opacity: 0.7;
     z-index: 1;
     right: 20%;
+     display: flex;
+    justify-content: center;
+    align-items: center;
 }
     
 
@@ -121,26 +132,218 @@ body{
     opacity: 0.7;
     z-index: 1;
 }
-.btn1{
-    position: absolute;
-
-    left: 20%;
-    top: 76.5%;
-    opacity: 20%;
-    
-}
-.btn2{
-    position: absolute;
-    left: 25%;
-    top: 76.5%;
-    opacity: 20%;
-    
-}
-button{
-    width: 35px;
-    height: 30px;
-    border-radius: 15px;
-}
 .attivo{
     border: 3px solid green;
+}
+
+
+#pulsanti{
+    background-color: transparent;
+    width: 20%;
+    position: absolute;
+    width: 13%;
+    height: 15%;
+    top: 59%;
+    left: 68%;
+    transform: perspective(800px);
+}
+.pulsanteA{
+    position: absolute;
+    width: 27%;
+    height: 25%;
+    top: 37%;
+    left: 64%;
+    border: none;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    transform: rotatex(20deg);
+    background-color: grey;
+    box-shadow: 0px 5px 0px #555 ;
+    cursor: pointer;
+    
+
+}
+.pulsanteB{
+    position: absolute;
+    width: 27%;
+    height: 25%;
+    top: 63%;
+    left: 37%;
+    border: none;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    transform: rotatex(20deg);
+    background-color: grey;
+    box-shadow: 0px 5px 0px #555 ;
+    cursor: pointer;
+}
+.pulsanteY{
+   position: absolute;
+    width: 27%;
+    height: 25%;
+    top: 37%;
+    left: 7%;
+    border: none;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    transform: rotatex(20deg);
+    background-color: grey;
+    box-shadow: 0px 5px 0px #555 ;
+    cursor: pointer; 
+}
+.pulsanteX{
+    position: absolute;
+    width: 27%;
+    height: 25%;
+    top: 10%;
+    left: 32%;
+    border: none;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    transform: rotatex(20deg);
+    background-color: grey;
+    box-shadow: 0px 5px 0px #555 ;
+    cursor: pointer;
+}
+.pulsanteA:hover{
+    box-shadow: none;
+    box-shadow: 0px 2px 0px ;
+    transform:  translatey(1.5%);  
+    transition: 0.5s; 
+}
+.pulsanteB:hover{
+    box-shadow: none;
+    box-shadow: 0px 2px 0px ;
+    transform:  translatey(1.5%);  
+    transition: 0.5s; 
+}
+.pulsanteY:hover{
+    box-shadow: none;
+    box-shadow: 0px 2px 0px ;
+    transform:  translatey(1.5%);  
+    transition: 0.5s; 
+}
+.pulsanteX:hover{
+    box-shadow: none;
+    box-shadow: 0px 2px 0px ;
+    transform:  translatey(1.5%);  
+    transition: 0.5s; 
+}
+#pulsantiSotto{
+    background-color: transparent;
+    width: 45%;
+    height: 6%;
+    position: absolute;
+    top: 84%;
+    left: 33%;
+    transform: perspective(800px);
+   
+
+}
+.pulsanteP{
+    background-color: grey;
+    position: absolute;
+    width: 7%;
+    height: 60%;
+    right: 11%;
+    top: 5%;
+    border-radius:2px;
+    border: none;
+    transform-style: preserve-3d;
+    transform: skewX(7deg);
+    box-shadow: -2px 4px 1.5px #555;
+}
+.pulsanteP:hover{
+    box-shadow: none;
+    box-shadow: 0px 2px 0px ;
+    transform: translateY(0.8px) skewX(7deg);
+    transition: 0.3s;
+}
+.pulsanteH{
+    position: absolute;
+    background-color: grey;
+    border: none;
+    width: 17%;
+    height: 30%;
+    right: 54%;
+    top: 37%;
+    border-radius: 3px;
+    box-shadow: 0px 2.5px 0px #555;
+}
+.pulsanteH svg{
+    width: 30%;
+    height: 100%;
+}
+.pulsanteH:hover{
+    box-shadow: 0px 2px 0px ;
+    transform: translateY(4%); 
+    transition: 0.3s;
+}
+.pulsanteST{
+   position: absolute;
+    background-color: grey;
+    border: none;
+    width: 17%;
+    height: 30%;
+    right: 30%;
+    top: 37%;
+    border-radius: 3px;
+    box-shadow: 0px 2.5px 0px #555; 
+}
+.pulsanteST:hover{
+    box-shadow: 0px 2px 0px ;
+    transform: translateY(4%); 
+    transition: 0.3s;
+}
+.pulsanteSE{
+    position: absolute;
+    background-color: grey;
+    border: none;
+    width: 17%;
+    height: 30%;
+    right: 79%;
+    top: 37%;
+    border-radius: 3px;
+    box-shadow: 0px 2.5px 0px #555; 
+}
+.pulsanteSE:hover{
+    box-shadow: 0px 2px 0px ;
+    transform: translateY(4%); 
+    transition: 0.3s;
+}
+#pulsantiAlato{
+    background-color: transparent;
+    width: 15%;
+    height: 15%;
+    position: absolute;
+    top: 72%;
+    left: 17%;
+    
+}
+.btnL{
+    position: absolute;
+    background-color: blueviolet;
+    box-shadow: 2px 5px 2px black;
+    
+}
+
+.btnR{
+   position: absolute;
+   background-color:grey; 
+   left: 50%;
+   top: 34%;
+   width: 37%;
+   height: 24%;
+   clip-path: polygon(
+      30% 0%,
+      100% 0%,
+      100% 100%,
+      30% 100%,
+      0% 50%
+   );
+   border: none;
+   cursor: pointer;
+   
+
+   
 }
