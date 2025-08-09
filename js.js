@@ -7,7 +7,8 @@ const B = document.querySelector(".pulsanteB");
 const projects = document.querySelector("#projects");
 const titoloProj = document.querySelector(".titoloProj");
 const proj1stPage = document.querySelector(".proj1stPage");
-
+const screen2PrimoPrjct = document.querySelector(".screen2PrimoPrjct");
+ const screen2 = document.querySelector(".screen2");
 
 let primaParte = true;
 let indice = 1;
@@ -18,6 +19,8 @@ aggTasti();
 
 function nascostoAvvio(){
     proj1stPage.classList.add("nascosto");
+    screen2PrimoPrjct.classList.add("nascosto");
+
 }
 function aggTasti (){
     
@@ -58,12 +61,17 @@ function prj(){
     if(projects.classList.contains("active1st")){
         titoloProj.classList.add("nascosto");
         proj1stPage.classList.remove("nascosto");
+        screen2.classList.add("nascosto");
+        screen2PrimoPrjct.classList.remove("nascosto");
+        
 
     }
 }
 function prjR(){
     titoloProj.classList.remove("nascosto");
     proj1stPage.classList.add("nascosto");
+    screen2.classList.remove("nascosto");
+    screen2PrimoPrjct.classList.add("nascosto");
 }
 
 

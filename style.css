@@ -131,6 +131,23 @@ body{
     overflow: visible;
     transition: transform 0.5s ease-in-out;
 }
+.screen2PrimoPrjct{
+    background-color: grey;
+    top: 58.6%;
+    width: 29.2%;
+    height: 23%;
+    position: absolute;
+    transform: perspective(560px) rotateX(20deg);
+    transform-origin: top;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    overflow: visible;
+    transition:  1s ease-in-out;
+}
 .text{
     padding: 5px;
     font-size: 10px;
