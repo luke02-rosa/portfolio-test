@@ -2,17 +2,31 @@ const texts = document.querySelectorAll(".text");
 const texts1 = document.querySelectorAll(".text1");
 const btnL = document.querySelector(".btnL");
 const btnR = document.querySelector(".btnR");
+const A = document.querySelector(".pulsanteA");
+const B = document.querySelector(".pulsanteB");
+const projects = document.querySelector("#projects");
+const titoloProj = document.querySelector(".titoloProj");
+const proj1stPage = document.querySelector(".proj1stPage");
 
+
+let primaParte = true;
 let indice = 1;
 
-function aggTasti (){
+nascostoAvvio();
+aggTasti();
 
+
+function nascostoAvvio(){
+    proj1stPage.classList.add("nascosto");
+}
+function aggTasti (){
+    
     texts.forEach(el=> el.classList.remove("attivo","sinistra","destra"))
     texts1.forEach(el=> el.classList.remove("attivo","sinistra","destra"))
 
     //div centrale
     texts[indice].classList.add("attivo");
-    texts[indice].classList.contains("attivo")
+    
     
     
 
@@ -40,7 +54,18 @@ function aggTasti (){
     }
    
 }
-aggTasti();
+function prj(){
+    if(projects.classList.contains("active1st")){
+        titoloProj.classList.add("nascosto");
+        proj1stPage.classList.remove("nascosto");
+
+    }
+}
+function prjR(){
+    titoloProj.classList.remove("nascosto");
+    proj1stPage.classList.add("nascosto");
+}
+
 
 btnL.addEventListener("click", ()=>{
     btnL.style.cssText = "transform:translatey(2%) rotate(-1deg)" ;
@@ -64,11 +89,17 @@ btnL.addEventListener("click", ()=>{
         cursor: pointer;
         transform: rotate(2deg);`    
     },150);
-    indice--
+    if(primaParte===false){
+    }else{
+        indice--
     if(indice<0){
         indice = texts.length-1;
     }
     aggTasti()
+    }
+    
+    
+    
     
 })
 btnR.addEventListener("click", ()=>{
@@ -92,12 +123,48 @@ btnR.addEventListener("click", ()=>{
         cursor: pointer;
         transform: rotate(1.5deg);
 `
-    },150);
+    },150);if(primaParte===false){
+    }else{
     indice++
     if(indice>texts.length -1){
         indice = 0;
     }
-    aggTasti()
+    aggTasti()}
     
+})
+
+A.addEventListener("click",()=>{
+    primaParte = false;
+    const target = document.querySelector(".text1.attivo");
+    const targetS = document.querySelector(".text1.sinistra");
+    const targetD = document.querySelector(".text1.destra");
+
+    
+
+    target.classList.add("active1st");
+    targetS.classList.add("hidden");
+    targetD.classList.add("hidden");
+
+    prj();
+    
+})
+B.addEventListener("click", ()=>{
+    if(primaParte===false){
+        const target = document.querySelector(".text1.attivo");
+        const targetS = document.querySelector(".text1.sinistra");
+        const targetD = document.querySelector(".text1.destra");
+
+        
+
+        target.classList.remove("active1st");
+        targetS.classList.remove("hidden");
+        targetD.classList.remove("hidden");
+
+      primaParte=true;
+
+      prjR();
+      
+    }
+        
 })
 

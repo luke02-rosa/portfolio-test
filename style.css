@@ -39,6 +39,7 @@ body{
     overflow: visible;
     
     
+    
      
 }
 
@@ -73,7 +74,7 @@ body{
     opacity: 0.7;
     z-index: 1;
     left: 20%;
-     display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -86,9 +87,34 @@ body{
     justify-content: center;
     align-items: center;
 }
-    
+/* classi per la prima parte*/
+.active1st{
+        opacity: 1;
+        transform: scale(1) rotateY(0deg);
+        z-index: 2;
+        cursor: default;
+        width: 100% !important;
+        height: 100% ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
 
+        
+}
+.hidden{
+    opacity: 0 !important; 
+    transition: 0s !important;
+}
+.nascosto{
+    display: none !important;
 
+}
+.proj1stPage{
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+}
 .screen2{
     background-color: grey;
     top: 58.6%;
