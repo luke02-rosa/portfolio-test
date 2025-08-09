@@ -318,22 +318,36 @@ body{
     position: absolute;
     top: 72%;
     left: 17%;
+    perspective: (800px);
     
 }
 .btnL{
-    position: absolute;
-    background-color: blueviolet;
-    box-shadow: 2px 5px 2px black;
-    
+   position: absolute;
+   background-color:grey; 
+   right: 53%;
+   top: 34%;
+   width: 25%;
+   height: 20%;
+   clip-path: polygon(
+      0% 0%,
+      70% 0%,
+      100% 50%,
+      70% 100%,
+      0% 100%
+   );
+   border: none;
+   cursor: pointer;
+   transform: rotate(2deg);
+   
 }
 
 .btnR{
    position: absolute;
    background-color:grey; 
-   left: 50%;
+   left: 55%;
    top: 34%;
-   width: 37%;
-   height: 24%;
+   width: 25%;
+   height: 20%;
    clip-path: polygon(
       30% 0%,
       100% 0%,
@@ -343,7 +357,62 @@ body{
    );
    border: none;
    cursor: pointer;
-   
+   transform: rotate(1.5deg)
+}
+.btnU{
+    position: absolute;
+   background-color:grey; 
+   left: 41%;
+   top: 14%;
+   width: 20%;
+   height: 29%;
+   clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 70%,
+      50% 100%,
+      0% 70%
+   );
+   border: none;
+   cursor: pointer;
+   transform: rotate(3.8deg);
+
 
    
+}
+.btnD{
+   position: absolute;
+   background-color:grey; 
+   left: 39%;
+   top: 45%;
+   width: 20%;
+   height: 29.6%;
+   clip-path: polygon(
+      50% 0%,
+      100% 30%,
+      100% 100%,
+      0% 100%,
+      0% 30%
+   );
+   border: none;
+   cursor: pointer;
+   transform: rotate(3.8deg);
+
+}
+.riempitivo{
+    position: absolute;
+   background-color:grey; 
+   left: 33%;
+   top: 34.5%;
+   width: 31%;
+   height: 19.9%;
+   transform: rotate(deg);
+}
+
+
+.btnU:hover{
+    transform:  translateY(3%) rotate(3.8deg); ;
+}
+.btnD:hover{
+    transform: translateY(3%) rotate(3.8deg);
 }
